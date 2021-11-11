@@ -1,0 +1,41 @@
+---
+title: "HomeworkSix"
+author: "April Wright"
+date: "10/29/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Plotting and choices
+
+## 10 points, due Nov. 5 at 5 PM
+
+For your final project in this class, you will be making an R Package. It will consist of 3 functions that do the following:
+
++ One to clean up data, such as removing NAs or renaming columns
++ One to plot data
++ One of some sort of statistical test
+
+(Master's and H-Option students see below)
+
+You may work with any of the data sets we've worked with this semester, the ants, the surveys, NOAA/GBIF. Your choice.
+
+# For this week:
+
+Make three .R files in your R_package_Lastname folder. Title each one with what it will do. For example, if your function will make a histogram, title it "HistogramPlot.R" or something. 
+
+Choose the dataset you'd like to work with. Place it in the data directory.
+
+Add, commit, and push the three functions and the data to GitHub. 
+
+
+# MS Students
+
+You're doing five functions. As we discussed, try to make a final determination of what data you'd like to use and upload it to the data directory.
+
+# H-Option
+
+I will be uploading your data. **Do not commit the log files to GitHub. They are too big.** You'll be working on your posterior predictive simulations. You'll need to have a function to extract data from the posterior trace, one to run the simulations, and one to compare the original values from the posterior trace to the simulated data sets. You might also consider a function to make some sort of visual.
