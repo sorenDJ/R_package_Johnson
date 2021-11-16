@@ -1,0 +1,10 @@
+Package: CoolBeans
+Title: An R Package to help with genomic population structure analysis
+Version: 0.0.0.9000
+Authors@R: 
+    person("Soren", "Johnson", , "soren.johnson@selu.edu", role = c("aut", "cre"))
+Description: This package helps to create text files to use for genomic data and run population genomic analyses on that data. This package can also be used to create plots utulizing the population structure analyses.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
