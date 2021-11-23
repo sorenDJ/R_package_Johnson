@@ -1,5 +1,16 @@
-#Want to clean up the data and only keep relevant columns and rows
+#' Produce a .txt file with needed information for population data
+#' 
+#' 
+#' 
+#' 
+#' 
 
-#Expected input: input a .csv file, what columns are wanted to be kept, what samples are wanted to be kept
-
-#Excepted output: output a text file with NA values standardized and removed, and then have the wanted columns and rows
+pop_data_output <- function(file, columns, sample_col, samples, NA_values){
+  data <- read_csv(file = file, col_select = {{columns}}, na = NA_values)
+#  filtered_data <- filter(data, {{sample_col}} %in% samples)
+    filtered_data <- data %>% 
+    filter({{sample_col}} %in% samples) 
+  write.table(filtered_data, "output_file.txt", sep = "\t", row.names = FALSE)
+   return(filtered_data)
+  
+}
