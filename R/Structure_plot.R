@@ -1,5 +1,6 @@
 #Create a structure/admixture plot through LEA using snmf
 #'
+#'need LEA package
 #'@param project_name the project name that was created through snmf and using the SNMF_Analysis function. Can also be any snmf Project
 #'@param K the number of populations that are to be used for the structure analysis
 #'@param colors a list of colors to be used for the structure plot, need the same amount of colors as K
