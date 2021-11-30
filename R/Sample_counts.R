@@ -1,5 +1,6 @@
 #' Use to check number of samples with a certain variable and then filter out samples that have a certain value for that varaible and create a new csv file with those samples
 #'
+#'need tidyverse package
 #'@param file a csv file with the sample data
 #'@param na_values list of values in csv file to be treated as NA values
 #'@param col2count the column in the csv file to use as the variable to see how many sample belong to each variable
