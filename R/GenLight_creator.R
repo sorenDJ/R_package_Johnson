@@ -1,5 +1,6 @@
 #'Creates a genlight object from a vcf file that can be used in adegent package to look at population structure
 #'
+#'need packages ape, poppr, vcfR
 #'@param vcf_file the path to the vcf file that will be used to create the genlight object
 #'@param pop_data a text file with the samples and population data to be analyzed, should have a heading for each of the columns
 #'@param genlight_name the name of the output genelight object, needs to be in quotes
