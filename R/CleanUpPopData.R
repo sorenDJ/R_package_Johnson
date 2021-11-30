@@ -1,5 +1,6 @@
 #' Produce a .txt file with needed information for population data
 #' 
+#' need tidyverse package
 #' @param file the file path to the csv file to be converted to text file
 #' @param columns the columns in the csv file that are to be kept for the text file
 #' @param sample_col the column that has the sample numbers/names that will be used to select certain rows
