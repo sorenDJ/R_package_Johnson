@@ -1,4 +1,4 @@
-#'For fun
+#'For fun and need some stress relief from data analysis
 #'
 #'@param a string, needs to be in quotes
 #'@usage
