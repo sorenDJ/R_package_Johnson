@@ -42,8 +42,9 @@ Let us download some data for our package:
 ```{r}
 download.file("https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/DNA_Samples_Data_Analysis.csv", destfile = "/cloud/project/Output_files/Downloaded_csv.csv")
 
-download.file("https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/c_ven_pop_5.txt", destfile = "/cloud/project/Output_files/c_ven_pop_5.txt")
+download.file("https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/mtDNA_samples_data.txt", destfile = "/cloud/project/data/mtDNA_samples_data.txt")
 
+download.file("https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/mtDNA_pop.vcf", destfile = "/cloud/project/data/mtDNA_pop.vcf")
 ```
 
 ## Working Example
@@ -83,7 +84,7 @@ This function is to be used to determine the optimal K value given a vcf data se
 This function can help to determine the number of ancestral populations and distinct genetic clusters. The found K value can then be used to plot structure plots. The created snmf project can then also be used for doing analyses in the LEA package.
 
 ```{r}
-op_K_snmf(vcf_file = "/cloud/project/data/c_ven_phy_50_pop.vcf", K = 4:5, new_name = "/cloud/project/Output_files/test_2.geno", repetitions = 2, project_name = "snmf_test_2")
+op_K_snmf(vcf_file = "/cloud/project/data/mtDNA_pop.vcf", K = 4:5, new_name = "/cloud/project/Output_files/test_1.geno", repetitions = 2, project_name = "snmf_test_1")
 ```
 
 ## Structure_plot function
@@ -93,7 +94,7 @@ This function creates a structure plot from a snmf project for a given value of 
 This function is important because strucutre plots are a common anlaysis a figure used to look at genetic structure.
 
 ```{r}
-snmf_structure_plot(project_name = snmf_test_2, K = 4, colors = c("green", "blue", "purple", "red"))
+snmf_structure_plot(project_name = snmf_test_1, K = 4, colors = c("green", "blue", "purple", "red"))
 ```
 
 ## GenLight_creator
@@ -103,6 +104,6 @@ This function creates a genlight object from a vcf file. This genlight object ca
 This function is important because it helps complete many steps in just one step. The genlight object is also important if using the adegent package and this function helps to keep the code organized so less likely to make a mistake.
 
 ```{r}
-genlight_creator(vcf_file = "c_ven_phy_50_pop.vcf", pop_data = "c_ven_pop_5.txt", genlight_name = "gl.test", pop_col = sub_species)
+genlight_creator(vcf_file = "mtDNA_pop.vcf", pop_data = "mtDNA_samples_data.txt", genlight_name = "gl.test", pop_col = sub_species)
 ```
 
