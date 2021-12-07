@@ -1,4 +1,4 @@
-#' Use to check number of samples with a certain variable and then filter out samples that have a certain value for that varaible and create a new csv file with those samples
+#' Use to check number of samples with a certain variable and then filter out samples that have a certain value for that variable and create a new csv file with those samples
 #'
 #'need tidyverse package
 #'@param file a csv file with the sample data
