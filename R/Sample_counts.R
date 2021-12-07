@@ -8,7 +8,7 @@
 #'@param filter list of values for the selected column that is to be filtered into a new csv file
 #'@usage
 #' samp_2B_seq(file = "/cloud/project/data/DNA_Samples_Data_Analysis.csv", na_values = c("", "na"), col2count = strange_topology, output_csv = "/cloud/project/Output_files/test_output.csv", filter = c("yes", NA))
-#'
+#'@export
 
 samp_2B_seq <- function(file, na_values, col2count, output_csv, filter){
   sample_data <- read_csv(file = file, na = na_values)

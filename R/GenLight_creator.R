@@ -7,7 +7,7 @@
 #'@param pop_col the column from the population text file to be used as the population data
 #'@usage
 #' genlight_creator(vcf_file = "c_ven_phy_50_pop.vcf", pop_data = "c_ven_pop_5.txt", genlight_name = "gl.test", pop_col = sub_species)
-#'
+#'@export
 
 genlight_creator <- function(vcf_file, pop_data, genlight_name, pop_col){
   new_vcf_object.VCF <- read.vcfR(vcf_file)

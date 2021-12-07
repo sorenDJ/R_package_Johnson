@@ -11,8 +11,9 @@
 #Need code below to install LEA
 #if (!requireNamespace("BiocManager", quietly = TRUE))
 #install.packages("BiocManager")
-
 #BiocManager::install("LEA")
+
+#'@export
 
 op_K_snmf <- function(vcf_file, K, new_name, repetitions, project_name){
   convert_output <- vcf2geno(vcf_file, new_name)

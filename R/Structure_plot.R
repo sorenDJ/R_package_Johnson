@@ -6,7 +6,7 @@
 #'@param colors a list of colors to be used for the structure plot, need the same amount of colors as K
 #'@usage
 #' snmf_structure_plot(project_name = snmf_test_2, K = 4, colors = c("green", "blue", "purple", "red"))
-#'
+#'@export
 
 
 snmf_structure_plot <- function(project_name, K, colors){
