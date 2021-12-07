@@ -18,7 +18,7 @@ library(tidyverse)
 library(devtools)
 ```
 
-Install these packages
+Install these packages and load them
 ```{r, eval=FALSE}
 install.packages("vcfR")
 install.packages("ape")
