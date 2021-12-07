@@ -24,6 +24,10 @@ install.packages("vcfR")
 install.packages("ape")
 install.packages("poppr")
 devtools::install_github("bcm-uga/LEA")
+
+```
+
+```{r}
 library(vcfR)
 library(ape)
 library(poppr)
