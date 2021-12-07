@@ -91,7 +91,7 @@ This function is to be used to determine the optimal K value given a vcf data se
 This function can help to determine the number of ancestral populations and distinct genetic clusters. The found K value can then be used to plot structure plots. The created snmf project can then also be used for doing analyses in the LEA package.
 
 Example:
-```{r}
+```{r, eval=FALSE}
 op_K_snmf(vcf_file = "/cloud/project/data/mtDNA_pop.vcf", K = 4:5, new_name = "/cloud/project/Output_files/test_1.geno", repetitions = 2, project_name = "snmf_test_1")
 ```
 
