@@ -113,9 +113,9 @@
 <code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"sorenDJ/R_package_Johnson"</span><span class="op">)</span></code></pre></div>
 <pre><code><span class="co">## Downloading GitHub repo sorenDJ/R_package_Johnson@HEAD</span></code></pre>
 <pre><code>##   
-   checking for file ‘/tmp/RtmptCYNbT/remotes33b27e5252cf/sorenDJ-R_package_Johnson-9d36089/DESCRIPTION’ ...
+   checking for file ‘/tmp/Rtmp6zn8LU/remotes388d3ed0514a/sorenDJ-R_package_Johnson-22af44f/DESCRIPTION’ ...
   
- [32m✓ [39m   [38;5;247mchecking for file ‘/tmp/RtmptCYNbT/remotes33b27e5252cf/sorenDJ-R_package_Johnson-9d36089/DESCRIPTION’ [39m [36m [39m
+ [32m✓ [39m   [38;5;247mchecking for file ‘/tmp/Rtmp6zn8LU/remotes388d3ed0514a/sorenDJ-R_package_Johnson-22af44f/DESCRIPTION’ [39m [36m [39m
 ## 
   
  [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mpreparing ‘CoolBeans’: [39m [36m [39m
@@ -139,7 +139,7 @@
   
    
 ## </code></pre>
-<pre><code><span class="co">## Installing package into '/tmp/Rtmpk6klD3/temp_libpath1505413117b7'</span>
+<pre><code><span class="co">## Installing package into '/tmp/Rtmpk6klD3/temp_libpath150523e26616'</span>
 <span class="co">## (as 'lib' is unspecified)</span></code></pre>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"CoolBeans"</span><span class="op">)</span></code></pre></div>
@@ -159,6 +159,33 @@
 </ul>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mult.html">mult</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="cleanuppopdata-function">CleanUpPopData function<a class="anchor" aria-label="anchor" href="#cleanuppopdata-function"></a>
+</h2>
+<p>This function takes a csv file and converts it to a text file that only includes the data and samples that are specified.</p>
+<p>This function is important because some population structure analyses require text files with population data and the samples you want to look at.</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">pop_data_output</span><span class="op">(</span>file <span class="op">=</span> <span class="st">"/cloud/project/data/DNA_Samples_Data_Analysis.csv"</span>, columns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">SJ_number</span>, <span class="va">Species</span>, <span class="va">sub_species</span><span class="op">)</span>, sample_col <span class="op">=</span> <span class="va">SJ_number</span>, samples <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"AR01"</span>, <span class="st">"AR02"</span>, <span class="st">"AR03"</span><span class="op">)</span>, NA_values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"na"</span><span class="op">)</span>, output_file <span class="op">=</span> <span class="st">"/cloud/project/Output_files/test_pop_data.txt"</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">## <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">265</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">3</span></span></code></pre>
+<pre><code><span class="co">## <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
+<span class="co">## <span style="font-weight: bold;">Delimiter:</span> ","</span>
+<span class="co">## <span style="color: #BB0000;">chr</span> (3): SJ_number, Species, sub_species</span></code></pre>
+<pre><code><span class="co">## </span>
+<span class="co">## <span style="color: #00BBBB;">ℹ</span> Use <span style="color: #262626; background-color: #DADADA;">`spec()`</span> to retrieve the full column specification for this data.</span>
+<span class="co">## <span style="color: #00BBBB;">ℹ</span> Specify the column types or set <span style="color: #262626; background-color: #DADADA;">`show_col_types = FALSE`</span> to quiet this message.</span></code></pre>
+<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 3 × 3</span></span>
+<span class="co">##   SJ_number Species   sub_species</span>
+<span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      </span>
+<span class="co">## <span style="color: #BCBCBC;">1</span> AR01      C_venusta cercostigma</span>
+<span class="co">## <span style="color: #BCBCBC;">2</span> AR02      C_venusta cercostigma</span>
+<span class="co">## <span style="color: #BCBCBC;">3</span> AR03      C_venusta cercostigma</span></code></pre>
+</div>
+<div class="section level2">
+<h2 id="snmf_analysis-function">SNMF_Analysis function<a class="anchor" aria-label="anchor" href="#snmf_analysis-function"></a>
+</h2>
+<p>This function is to be used to determine the optimal K value given a vcf data set using a sparse non-negative matrix factorization algorithm. This function will output a summary of the cross-validation values for each K and also a plot of K and minimum cross-validation. This function also creates a snmf project object.</p>
+<p>This function can help to determine the number of ancestral populations and distinct genetic clusters. The found K value can then be used to plot structure plots. The created snmf project can then also be used for doing analyses in the LEA package.</p>
 </div>
   </div>
 
