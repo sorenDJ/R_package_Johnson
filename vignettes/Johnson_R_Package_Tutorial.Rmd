@@ -35,6 +35,7 @@ Now install own R package
 ```{r}
 devtools::install_github("sorenDJ/R_package_Johnson")
 library("CoolBeans")
+
 ```
 
 Let us download some data for our package:
