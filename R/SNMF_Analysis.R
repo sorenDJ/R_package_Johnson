@@ -8,15 +8,10 @@
 #'@usage
 #' op_K_snmf(vcf_file = "/cloud/project/data/c_ven_phy_50_pop.vcf", K = 4:5, new_name = "/cloud/project/Output_files/test_2.geno", repetitions = 2, project_name = "snmf_test_2")
 #'
-#Need code below to install LEA
-#if (!requireNamespace("BiocManager", quietly = TRUE))
-#install.packages("BiocManager")
-#BiocManager::install("LEA")
-
 #'@export
 
 op_K_snmf <- function(vcf_file, K, new_name, repetitions, project_name){
-  convert_output <- vcf2geno(vcf_file, new_name)
+  convert_output <- LEA::vcf2geno(vcf_file, new_name)
   if(is.numeric(repetitions) == FALSE){
     return("ERROR-- repitions is not numeric")
   }
