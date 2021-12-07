@@ -102,7 +102,7 @@ This function creates a structure plot from a snmf project for a given value of 
 This function is important because strucutre plots are a common anlaysis a figure used to look at genetic structure.
 
 Example:
-```{r}
+```{r, eval=FALSE}
 snmf_structure_plot(project_name = snmf_test_1, K = 4, colors = c("green", "blue", "purple", "red"))
 ```
 
@@ -114,6 +114,6 @@ This function is important because it helps complete many steps in just one step
 
 Example:
 ```{r}
-genlight_creator(vcf_file = "mtDNA_pop.vcf", pop_data = "mtDNA_samples_data.txt", genlight_name = "gl.test", pop_col = sub_species)
+genlight_creator(vcf_file = "/cloud/project/data/mtDNA_pop.vcf", pop_data = "/cloud/project/data/mtDNA_samples_data.txt", genlight_name = "gl.test", pop_col = sub_species)
 ```
 
