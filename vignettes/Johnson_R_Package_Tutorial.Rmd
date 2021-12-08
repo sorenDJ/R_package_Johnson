@@ -62,7 +62,7 @@ download.file("https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/maste
 result <- mult(4, 5)
 ```
 
-## CleanUpPopData function
+## pop_data_output function
 
 + This function takes a csv file and converts it to a text file that only includes the data and samples that are specified.
 
@@ -70,10 +70,10 @@ result <- mult(4, 5)
 
 Example:
 ```{r}
-pop_data_output(file = "/cloud/project/data/DNA_Samples_Data_Analysis.csv", columns = c(SJ_number, Species, sub_species), sample_col = SJ_number, samples = c("AR01", "AR02", "AR03"), NA_values = c("", "na"), output_file = "/cloud/project/test_pop_data.txt")
+test_pop_data <- pop_data_output(file = "/cloud/project/data/DNA_Samples_Data_Analysis.csv", columns = c(SJ_number, Species, sub_species), sample_col = SJ_number, samples = c("AR01", "AR02", "AR03"), NA_values = c("", "na"), output_file = "/cloud/project/test_pop_data.txt")
 ```
 
-## Sample_counts function
+## samp_2B_seq function
 
 + This function is to be used to check the number of samples for different values of a variable and then filter out samples that have a certain value for the variable. These filtered samples will then be created as a new csv file. 
 
@@ -84,7 +84,7 @@ Example:
 samp_2B_seq(file = "/cloud/project/data/DNA_Samples_Data_Analysis.csv", na_values = c("", "na"), col2count = strange_topology, output_csv = "/cloud/project/test_output.csv", filter = c("yes", NA))
 ```
 
-## SNMF_Analysis function
+## op_K_snmf function
 
 + This function is to be used to determine the optimal K value given a vcf data set using a sparse non-negative matrix factorization algorithm. This function will output a summary of the cross-validation values for each K and also a plot of K and minimum cross-validation. This function also creates a snmf project object.
 
@@ -95,7 +95,7 @@ Example:
 op_K_snmf(vcf_file = "/cloud/project/data/mtDNA_pop.vcf", K = 4:5, new_name = "/cloud/project/test_1.geno", repetitions = 2, project_name = "snmf_test_1")
 ```
 
-## Structure_plot function
+## snmf_structure_plot function
 
 + This function creates a structure plot from a snmf project for a given value of K. The structure plot displays the probability of each sample belonging to a certain genetic cluster.
 
@@ -106,7 +106,7 @@ Example:
 snmf_structure_plot(project_name = snmf_test_1, K = 4, colors = c("green", "blue", "purple", "red"))
 ```
 
-## GenLight_creator
+## genlight_creator
 
 + This function creates a genlight object from a vcf file. This genlight object can then be used in the adegent pacakge to look at genetic population structure. The genlight object also combines a text file with the vcf data and one variable is chosen to be a population variable.
 
