@@ -8,7 +8,7 @@
 #' @param NA_values values in the csv file that should be read as NA values
 #' @param output_file the file path for the output text file
 #' @usage
-#' pop_data_output(file = "/cloud/project/data/DNA_Samples_Data_Analysis.csv", columns = c(SJ_number, Species, sub_species), sample_col = SJ_number, samples = c("AR01", "AR02", "AR03"), NA_values = c("", "na"), output_file = "/cloud/project/Output_files/test_pop_data.txt")
+#' pop_data_output(file = "/cloud/project/data/DNA_Samples_Data_Analysis.csv", columns = c(SJ_number, Species, sub_species), sample_col = SJ_number, samples = c("AR01", "AR02", "AR03"), NA_values = c("", "na"), output_file = "/cloud/project/test_pop_data.txt")
 #' @export
 
 pop_data_output <- function(file, columns, sample_col, samples, NA_values, output_file){
