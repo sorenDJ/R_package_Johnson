@@ -92,7 +92,7 @@ samp_2B_seq(file = "/cloud/project/data/DNA_Samples_Data_Analysis.csv", na_value
 
 Example:
 ```{r, eval=FALSE}
-op_K_snmf(vcf_file = "/cloud/project/data/mtDNA_pop.vcf", K = 4:5, new_name = "/cloud/project/Output_files/test_1.geno", repetitions = 2, project_name = "snmf_test_1")
+op_K_snmf(vcf_file = "/cloud/project/data/mtDNA_pop.vcf", K = 4:5, new_name = "/cloud/project/test_1.geno", repetitions = 2, project_name = "snmf_test_1")
 ```
 
 ## Structure_plot function
