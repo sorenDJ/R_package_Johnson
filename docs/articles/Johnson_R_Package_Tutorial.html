@@ -90,7 +90,7 @@
 <pre><code><span class="co">## ── <span style="font-weight: bold;">Attaching packages</span> ─────────────────────────────────────── tidyverse 1.3.1 ──</span></code></pre>
 <pre><code><span class="co">## <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">tibble </span> 3.1.6     <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">dplyr  </span> 1.0.7</span>
 <span class="co">## <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">tidyr  </span> 1.1.4     <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">stringr</span> 1.4.0</span>
-<span class="co">## <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">readr  </span> 2.1.0     <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">forcats</span> 0.5.1</span>
+<span class="co">## <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">readr  </span> 2.1.1     <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">forcats</span> 0.5.1</span>
 <span class="co">## <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">purrr  </span> 0.3.4</span></code></pre>
 <pre><code><span class="co">## ── <span style="font-weight: bold;">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──</span>
 <span class="co">## <span style="color: #BB0000;">x</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">filter()</span> masks <span style="color: #0000BB;">stats</span>::filter()</span>
@@ -98,56 +98,52 @@
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span></code></pre></div>
 <pre><code><span class="co">## Loading required package: usethis</span></code></pre>
-<p>Install these packages</p>
+<p>Install these packages and load them</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"vcfR"</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ape"</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"poppr"</span><span class="op">)</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"bcm-uga/LEA"</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/knausb/vcfR" class="external-link">vcfR</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://ape-package.ird.fr/" class="external-link">ape</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://grunwaldlab.github.io/poppr/" class="external-link">poppr</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://membres-timc.imag.fr/Olivier.Francois/lea.html" class="external-link">LEA</a></span><span class="op">)</span></code></pre></div>
-<p>Now install own R package</p>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"bcm-uga/LEA"</span><span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"sorenDJ/R_package_Johnson"</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## Downloading GitHub repo sorenDJ/R_package_Johnson@HEAD</span></code></pre>
-<pre><code>##   
-   checking for file ‘/tmp/Rtmp6zn8LU/remotes388d3ed0514a/sorenDJ-R_package_Johnson-22af44f/DESCRIPTION’ ...
-  
- [32m✓ [39m   [38;5;247mchecking for file ‘/tmp/Rtmp6zn8LU/remotes388d3ed0514a/sorenDJ-R_package_Johnson-22af44f/DESCRIPTION’ [39m [36m [39m
-## 
-  
- [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mpreparing ‘CoolBeans’: [39m [36m [39m
-## 
-  
-   checking DESCRIPTION meta-information ...
-  
- [32m✓ [39m   [38;5;247mchecking DESCRIPTION meta-information [39m [36m [39m
-## 
-  
- [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mchecking for LF line-endings in source and make files and shell scripts [39m [36m [39m
-## 
-  
- [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mchecking for empty or unneeded directories [39m [36m [39m
-##  [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mlooking to see if a ‘data/datalist’ file should be added [39m [36m [39m
-## 
-  
- [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mcreating default NAMESPACE file [39m [36m [39m
-##  [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mbuilding ‘CoolBeans_0.0.0.9000.tar.gz’ [39m [36m [39m
-## 
-  
-   
-## </code></pre>
-<pre><code><span class="co">## Installing package into '/tmp/Rtmpk6klD3/temp_libpath150523e26616'</span>
-<span class="co">## (as 'lib' is unspecified)</span></code></pre>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/knausb/vcfR" class="external-link">vcfR</a></span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">## </span>
+<span class="co">##    *****       ***   vcfR   ***       *****</span>
+<span class="co">##    This is vcfR 1.12.0 </span>
+<span class="co">##      browseVignettes('vcfR') # Documentation</span>
+<span class="co">##      citation('vcfR') # Citation</span>
+<span class="co">##    *****       *****      *****       *****</span></code></pre>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://ape-package.ird.fr/" class="external-link">ape</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://grunwaldlab.github.io/poppr/" class="external-link">poppr</a></span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">## Loading required package: adegenet</span></code></pre>
+<pre><code><span class="co">## Loading required package: ade4</span></code></pre>
+<pre><code><span class="co">## </span>
+<span class="co">##    /// adegenet 2.1.5 is loaded ////////////</span>
+<span class="co">## </span>
+<span class="co">##    &gt; overview: '?adegenet'</span>
+<span class="co">##    &gt; tutorials/doc/questions: 'adegenetWeb()' </span>
+<span class="co">##    &gt; bug reports/feature requests: adegenetIssues()</span></code></pre>
+<pre><code><span class="co">## Registered S3 method overwritten by 'pegas':</span>
+<span class="co">##   method      from</span>
+<span class="co">##   print.amova ade4</span></code></pre>
+<pre><code><span class="co">## This is poppr version 2.9.3. To get started, type package?poppr</span>
+<span class="co">## OMP parallel support: available</span></code></pre>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://membres-timc.imag.fr/Olivier.Francois/lea.html" class="external-link">LEA</a></span><span class="op">)</span></code></pre></div>
+<p>Now install own R package</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"sorenDJ/R_package_Johnson"</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">## Skipping install of 'CoolBeans' from a github remote, the SHA1 (114ce99a) has not changed since last install.</span>
+<span class="co">##   Use `force = TRUE` to force installation</span></code></pre>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"CoolBeans"</span><span class="op">)</span></code></pre></div>
 <p>Let us download some data for our package:</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/download.file.html" class="external-link">download.file</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/DNA_Samples_Data_Analysis.csv"</span>, destfile <span class="op">=</span> <span class="st">"/cloud/project/Output_files/Downloaded_csv.csv"</span><span class="op">)</span>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/download.file.html" class="external-link">download.file</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/DNA_Samples_Data_Analysis.csv"</span>, destfile <span class="op">=</span> <span class="st">"/cloud/project/data/DNA_Samples_Data_Analysis.csv"</span><span class="op">)</span>
 
-<span class="fu"><a href="https://rdrr.io/r/utils/download.file.html" class="external-link">download.file</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/c_ven_pop_5.txt"</span>, destfile <span class="op">=</span> <span class="st">"/cloud/project/Output_files/c_ven_pop_5.txt"</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/utils/download.file.html" class="external-link">download.file</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/mtDNA_samples_data.txt"</span>, destfile <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_samples_data.txt"</span><span class="op">)</span>
+
+<span class="fu"><a href="https://rdrr.io/r/utils/download.file.html" class="external-link">download.file</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/mtDNA_pop.vcf"</span>, destfile <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_pop.vcf"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="working-example">Working Example<a class="anchor" aria-label="anchor" href="#working-example"></a>
@@ -157,16 +153,19 @@
 <li>Say something about why this is a good thing to do</li>
 <li>say something about expected output</li>
 </ul>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mult.html">mult</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="cleanuppopdata-function">CleanUpPopData function<a class="anchor" aria-label="anchor" href="#cleanuppopdata-function"></a>
+<h2 id="pop_data_output-function">pop_data_output function<a class="anchor" aria-label="anchor" href="#pop_data_output-function"></a>
 </h2>
-<p>This function takes a csv file and converts it to a text file that only includes the data and samples that are specified.</p>
-<p>This function is important because some population structure analyses require text files with population data and the samples you want to look at.</p>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">pop_data_output</span><span class="op">(</span>file <span class="op">=</span> <span class="st">"/cloud/project/data/DNA_Samples_Data_Analysis.csv"</span>, columns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">SJ_number</span>, <span class="va">Species</span>, <span class="va">sub_species</span><span class="op">)</span>, sample_col <span class="op">=</span> <span class="va">SJ_number</span>, samples <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"AR01"</span>, <span class="st">"AR02"</span>, <span class="st">"AR03"</span><span class="op">)</span>, NA_values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"na"</span><span class="op">)</span>, output_file <span class="op">=</span> <span class="st">"/cloud/project/Output_files/test_pop_data.txt"</span><span class="op">)</span></code></pre></div>
+<ul>
+<li><p>This function takes a csv file and converts it to a text file that only includes the data and samples that are specified.</p></li>
+<li><p>This function is important because some population structure analyses require text files with population data and the samples you want to look at.</p></li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">test_pop_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pop_data_output.html">pop_data_output</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"/cloud/project/data/DNA_Samples_Data_Analysis.csv"</span>, columns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">SJ_number</span>, <span class="va">Species</span>, <span class="va">sub_species</span><span class="op">)</span>, sample_col <span class="op">=</span> <span class="va">SJ_number</span>, samples <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"AR01"</span>, <span class="st">"AR02"</span>, <span class="st">"AR03"</span><span class="op">)</span>, NA_values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"na"</span><span class="op">)</span>, output_file <span class="op">=</span> <span class="st">"/cloud/project/test_pop_data.txt"</span><span class="op">)</span></code></pre></div>
 <pre><code><span class="co">## <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">265</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">3</span></span></code></pre>
 <pre><code><span class="co">## <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
 <span class="co">## <span style="font-weight: bold;">Delimiter:</span> ","</span>
@@ -174,18 +173,87 @@
 <pre><code><span class="co">## </span>
 <span class="co">## <span style="color: #00BBBB;">ℹ</span> Use <span style="color: #262626; background-color: #DADADA;">`spec()`</span> to retrieve the full column specification for this data.</span>
 <span class="co">## <span style="color: #00BBBB;">ℹ</span> Specify the column types or set <span style="color: #262626; background-color: #DADADA;">`show_col_types = FALSE`</span> to quiet this message.</span></code></pre>
-<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 3 × 3</span></span>
-<span class="co">##   SJ_number Species   sub_species</span>
-<span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      </span>
-<span class="co">## <span style="color: #BCBCBC;">1</span> AR01      C_venusta cercostigma</span>
-<span class="co">## <span style="color: #BCBCBC;">2</span> AR02      C_venusta cercostigma</span>
-<span class="co">## <span style="color: #BCBCBC;">3</span> AR03      C_venusta cercostigma</span></code></pre>
 </div>
 <div class="section level2">
-<h2 id="snmf_analysis-function">SNMF_Analysis function<a class="anchor" aria-label="anchor" href="#snmf_analysis-function"></a>
+<h2 id="samp_2b_seq-function">samp_2B_seq function<a class="anchor" aria-label="anchor" href="#samp_2b_seq-function"></a>
 </h2>
-<p>This function is to be used to determine the optimal K value given a vcf data set using a sparse non-negative matrix factorization algorithm. This function will output a summary of the cross-validation values for each K and also a plot of K and minimum cross-validation. This function also creates a snmf project object.</p>
-<p>This function can help to determine the number of ancestral populations and distinct genetic clusters. The found K value can then be used to plot structure plots. The created snmf project can then also be used for doing analyses in the LEA package.</p>
+<ul>
+<li><p>This function is to be used to check the number of samples for different values of a variable and then filter out samples that have a certain value for the variable. These filtered samples will then be created as a new csv file.</p></li>
+<li><p>This function can be helpful for organization of data. Often times I might want to know how many samples have already been sequeneced and how many haven’t. I then want a CSV file for the samples that haven’t been sequenced to know which ones they are.</p></li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/samp_2B_seq.html">samp_2B_seq</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"/cloud/project/data/DNA_Samples_Data_Analysis.csv"</span>, na_values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"na"</span><span class="op">)</span>, col2count <span class="op">=</span> <span class="va">strange_topology</span>, output_csv <span class="op">=</span> <span class="st">"/cloud/project/test_output.csv"</span>, filter <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"yes"</span>, <span class="cn">NA</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">## <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">265</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">30</span></span></code></pre>
+<pre><code><span class="co">## <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
+<span class="co">## <span style="font-weight: bold;">Delimiter:</span> ","</span>
+<span class="co">## <span style="color: #BB0000;">chr</span> (25): SJ_number, Species, sub_species, race, Kris_clade, my_clades, samp...</span>
+<span class="co">## <span style="color: #00BB00;">dbl</span>  (5): cluster, lat, long, ddRAD plate, Qubit_con_1(ng/ml)</span></code></pre>
+<pre><code><span class="co">## </span>
+<span class="co">## <span style="color: #00BBBB;">ℹ</span> Use <span style="color: #262626; background-color: #DADADA;">`spec()`</span> to retrieve the full column specification for this data.</span>
+<span class="co">## <span style="color: #00BBBB;">ℹ</span> Specify the column types or set <span style="color: #262626; background-color: #DADADA;">`show_col_types = FALSE`</span> to quiet this message.</span></code></pre>
+<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 3 × 2</span></span>
+<span class="co">##   strange_topology     n</span>
+<span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
+<span class="co">## <span style="color: #BCBCBC;">1</span> no                 118</span>
+<span class="co">## <span style="color: #BCBCBC;">2</span> yes                 12</span>
+<span class="co">## <span style="color: #BCBCBC;">3</span> <span style="color: #BB0000;">NA</span>                 135</span></code></pre>
+</div>
+<div class="section level2">
+<h2 id="op_k_snmf-function">op_K_snmf function<a class="anchor" aria-label="anchor" href="#op_k_snmf-function"></a>
+</h2>
+<ul>
+<li><p>This function is to be used to determine the optimal K value given a vcf data set using a sparse non-negative matrix factorization algorithm. This function will output a summary of the cross-validation values for each K and also a plot of K and minimum cross-validation. This function also creates a snmf project object.</p></li>
+<li><p>This function can help to determine the number of ancestral populations and distinct genetic clusters. The found K value can then be used to plot structure plots. The created snmf project can then also be used for doing analyses in the LEA package.</p></li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">op_K_snmf</span><span class="op">(</span>vcf_file <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_pop.vcf"</span>, K <span class="op">=</span> <span class="fl">4</span><span class="op">:</span><span class="fl">5</span>, new_name <span class="op">=</span> <span class="st">"/cloud/project/test_1.geno"</span>, repetitions <span class="op">=</span> <span class="fl">2</span>, project_name <span class="op">=</span> <span class="st">"snmf_test_1"</span><span class="op">)</span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="snmf_structure_plot-function">snmf_structure_plot function<a class="anchor" aria-label="anchor" href="#snmf_structure_plot-function"></a>
+</h2>
+<ul>
+<li><p>This function creates a structure plot from a snmf project for a given value of K. The structure plot displays the probability of each sample belonging to a certain genetic cluster.</p></li>
+<li><p>This function is important because strucutre plots are a common anlaysis a figure used to look at genetic structure.</p></li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/snmf_structure_plot.html">snmf_structure_plot</a></span><span class="op">(</span>project_name <span class="op">=</span> <span class="va">snmf_test_1</span>, K <span class="op">=</span> <span class="fl">4</span>, colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"green"</span>, <span class="st">"blue"</span>, <span class="st">"purple"</span>, <span class="st">"red"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="genlight_creator">genlight_creator<a class="anchor" aria-label="anchor" href="#genlight_creator"></a>
+</h2>
+<ul>
+<li><p>This function creates a genlight object from a vcf file. This genlight object can then be used in the adegent pacakge to look at genetic population structure. The genlight object also combines a text file with the vcf data and one variable is chosen to be a population variable.</p></li>
+<li><p>This function is important because it helps complete many steps in just one step. The genlight object is also important if using the adegent package and this function helps to keep the code organized so less likely to make a mistake.</p></li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/genlight_creator.html">genlight_creator</a></span><span class="op">(</span>vcf_file <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_pop.vcf"</span>, pop_data <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_samples_data.txt"</span>, genlight_name <span class="op">=</span> <span class="st">"gl.test"</span>, pop_col <span class="op">=</span> <span class="va">sub_species</span><span class="op">)</span></code></pre></div>
+<pre><code>## Scanning file to determine attributes.
+## File attributes:
+##   meta lines: 10
+##   header_line: 11
+##   variant count: 72
+##   column count: 131
+## 
+Meta line 10 read in.
+## All meta lines processed.
+## gt matrix initialized.
+## Character matrix gt created.
+##   Character matrix gt rows: 72
+##   Character matrix gt cols: 131
+##   skip: 0
+##   nrows: 72
+##   row_num: 0
+## 
+Processed variant: 72
+## All variants processed</code></pre>
+<pre><code><span class="co">## Warning in vcfR2genlight(new_vcf_object.VCF): Found 10 loci with more than two alleles.</span>
+<span class="co">## Objects of class genlight only support loci with two alleles.</span>
+<span class="co">## 10 loci will be omitted from the genlight object.</span></code></pre>
+<pre><code><span class="co">## [1] "gl.test"</span></code></pre>
 </div>
   </div>
 
@@ -206,7 +274,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.0.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
       </footer>
