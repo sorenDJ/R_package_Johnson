@@ -1,4 +1,4 @@
-#Create a structure/admixture plot through LEA using snmf
+#'Create a structure/admixture plot through LEA using snmf
 #'
 #'need LEA package
 #'@param project_name the project name that was created through snmf and using the SNMF_Analysis function. Can also be any snmf Project
