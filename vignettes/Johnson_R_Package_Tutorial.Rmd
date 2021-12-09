@@ -11,14 +11,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Installation
 
-Load in libaries used by this package
+Load in these libaries used by this package
 ```{r}
 library(ggplot2)
 library(tidyverse)
 library(devtools)
 ```
 
-Install these packages and load them
+Install these packages to properly use this package and then load the libraries
 ```{r, eval=FALSE}
 install.packages("vcfR")
 install.packages("ape")
@@ -34,7 +34,7 @@ library(poppr)
 library(LEA)
 ```
 
-Now install own R package
+Now install this sweet R package
 
 ```{r}
 devtools::install_github("sorenDJ/R_package_Johnson")
@@ -42,7 +42,13 @@ library("CoolBeans")
 
 ```
 
-Let us download some data for our package:
+Let us download some data to play around with this package:
+
+DNA_Samples_Data_Analysis is a csv file that contains data on collected tissue and DNA samples
+
+mtDNA_samples_data is a text file that contains certain samples (ones inlcuded in the vcf file) and columns from the above mentioned csv file 
+
+mtDNA_pop is a vcf file that contains the SNP data from the mitochondria for 122 samples of the Blacktail Shiner 
 
 ```{r}
 download.file("https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/DNA_Samples_Data_Analysis.csv", destfile = "/cloud/project/data/DNA_Samples_Data_Analysis.csv")
@@ -52,21 +58,13 @@ download.file("https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/maste
 download.file("https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/mtDNA_pop.vcf", destfile = "/cloud/project/data/mtDNA_pop.vcf")
 ```
 
-## Working Example
-
-+ An example of each function and how it works
-+ Say something about why this is a good thing to do
-+ say something about expected output
-
-```{r}
-result <- mult(4, 5)
-```
-
 ## pop_data_output function
 
-+ This function takes a csv file and converts it to a text file that only includes the data and samples that are specified.
++ This function takes a csv file and converts it to a text file that only includes the data and samples that are specified. The columns needs to be a concatenation of columns from the csv file that are wanted to be kept. These columns do not need quotes around them. Make sure to include the column that has the sample names which will then be used for sample_col (ex: SJ_number). samples are a concatenation of the names of the samples that you want to be kept (these need to be in quotes). NA_values are concatenation of values in the csv file you want to be read as NAs (ex: "" and "na"). Output_file is the path where you want the new text file to be saved. Before running the below example, make the necessarily changes to the file path so they work for your directory.
 
-+ This function is important because some population structure analyses require text files with population data and the samples you want to look at.
++ This function is important because some population structure analyses require text files with population data and the samples you want to look at. This process can be tidious otherwise.
+
++ This function should output the filtered dataframe and create a new text file.
 
 Example:
 ```{r}
@@ -75,9 +73,11 @@ test_pop_data <- pop_data_output(file = "/cloud/project/data/DNA_Samples_Data_An
 
 ## samp_2B_seq function
 
-+ This function is to be used to check the number of samples for different values of a variable and then filter out samples that have a certain value for the variable. These filtered samples will then be created as a new csv file. 
++ This function is to be used to check the number of samples for different values of a variable and then filter out samples that have a certain value for the variable. These filtered samples will then be created as a new csv file. col2count is the column (not in quotes) that you want to be counted for each variable. filter is a concatenation of the values you want thhe sample to have from the counted column (thes values will be in quotes). output_csv is the file path for the new csv file that has the filtered data.
 
 + This function can be helpful for organization of data. Often times I might want to know how many samples have already been sequeneced and how many haven't. I then want a CSV file for the samples that haven't been sequenced to know which ones they are.
+
++ The output should be the counts for the specified column and should have a new csv with the filtered data.
 
 Example:
 ```{r}
@@ -86,20 +86,26 @@ samp_2B_seq(file = "/cloud/project/data/DNA_Samples_Data_Analysis.csv", na_value
 
 ## op_K_snmf function
 
-+ This function is to be used to determine the optimal K value given a vcf data set using a sparse non-negative matrix factorization algorithm. This function will output a summary of the cross-validation values for each K and also a plot of K and minimum cross-validation. This function also creates a snmf project object.
++ This function is to be used to determine the optimal K value given a vcf data set using a sparse non-negative matrix factorization algorithm. This function will output a summary of the cross-validation values for each K and also a plot of K and minimum cross-validation. This function also creates a snmf project object. 
 
-+ This function can help to determine the number of ancestral populations and distinct genetic clusters. The found K value can then be used to plot structure plots. The created snmf project can then also be used for doing analyses in the LEA package.
++ vcf_file is the path to the vcf file to be used in the function. K is the range of number of genetic clusters you want to test to see how well they fit the data. new_name is the file path of where you want to save the vcf file that is converted to a geno file which is needed for this analysis. The new file has to end in .geno. repetitions is the number of times you want the cross-validation analysis to be run for each K value. Higher repetitions will take longer but most likely be more accurate. project_name is the name you want the snmf project name to have (this needs to be in quotes). This will be used for a later function.
+
++ This function can help to determine the number of ancestral populations and distinct genetic clusters. The found K value can then be used to plot structure plots. The created snmf project can then also be used for doing analyses in the LEA package. This function also converts a vcf file to geno file that can be used by certain packages.
+
++ The ouptut is a summary of the cross-validation values for each K value and a plot of K and the minimuim cross-validation. The lower the cross-validation score, the better the K fits in the data.
 
 Example:
 ```{r, eval=FALSE}
-op_K_snmf(vcf_file = "/cloud/project/data/mtDNA_pop.vcf", K = 4:5, new_name = "/cloud/project/test_1.geno", repetitions = 2, project_name = "snmf_test_1")
+op_K_snmf(vcf_file = "/cloud/project/data/mtDNA_pop.vcf", K = 1:10, new_name = "/cloud/project/test_1.geno", repetitions = 5, project_name = "snmf_test_1")
 ```
 
 ## snmf_structure_plot function
 
 + This function creates a structure plot from a snmf project for a given value of K. The structure plot displays the probability of each sample belonging to a certain genetic cluster.
 
-+ This function is important because strucutre plots are a common anlaysis a figure used to look at genetic structure.
++ the project name should be the one created from the above function or another created snmf project (this is not in quotes). K is a single numeric value representing the number of genetic clusters to use for the plot (use the optimal K found from the above function). colors is a concatenation of colors that you want to be used for the structure plot. Each color coresponds to a genetic cluster so the number of colors has to equal K.
+
++ This function is important because structure plots are a common analysis a figure used to look at genetic structure. This can help to assess the amount of admixture between different genetic clusters. This also outputs the order of the samples in the structure plot.
 
 Example:
 ```{r, eval=FALSE}
@@ -108,9 +114,13 @@ snmf_structure_plot(project_name = snmf_test_1, K = 4, colors = c("green", "blue
 
 ## genlight_creator
 
-+ This function creates a genlight object from a vcf file. This genlight object can then be used in the adegent pacakge to look at genetic population structure. The genlight object also combines a text file with the vcf data and one variable is chosen to be a population variable.
++ This function creates a genlight object from a vcf file. This genlight object can then be used in the adegent pacakge to look at genetic population structure. The genlight object also combines a text file with the vcf data and one variable that is chosen to be a population variable.
+
++ vcf_file is the pathfile the the vcf file to be used. pop_data is the path file to a text file with the samples in the vcf_file and certain population variables that you may want to use for analyses. genlight_name is the name you want this genlight oject to have. pop_col is a column from the pop_data text file you want to be used to group the samples.
 
 + This function is important because it helps complete many steps in just one step. The genlight object is also important if using the adegent package and this function helps to keep the code organized so less likely to make a mistake.
+
++ The output will give a quick summary of the data and the Processed variant is the number of the SNPs in the data. It should also display the name of the genlight object in quotes.
 
 Example:
 ```{r}
