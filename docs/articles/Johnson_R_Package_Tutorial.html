@@ -135,9 +135,9 @@
 <code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"sorenDJ/R_package_Johnson"</span><span class="op">)</span></code></pre></div>
 <pre><code><span class="co">## Downloading GitHub repo sorenDJ/R_package_Johnson@HEAD</span></code></pre>
 <pre><code>##   
-   checking for file ‘/tmp/RtmpPQl4Vf/remotes6d2431695d6/sorenDJ-R_package_Johnson-6cc5bcb/DESCRIPTION’ ...
+   checking for file ‘/tmp/RtmpDlMRjG/remotes2c3c8c12e3/sorenDJ-R_package_Johnson-16e5246/DESCRIPTION’ ...
   
- [32m✓ [39m   [38;5;247mchecking for file ‘/tmp/RtmpPQl4Vf/remotes6d2431695d6/sorenDJ-R_package_Johnson-6cc5bcb/DESCRIPTION’ [39m [36m [39m
+ [32m✓ [39m   [38;5;247mchecking for file ‘/tmp/RtmpDlMRjG/remotes2c3c8c12e3/sorenDJ-R_package_Johnson-16e5246/DESCRIPTION’ [39m [36m [39m
 ## 
   
  [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mpreparing ‘CoolBeans’: [39m [36m [39m
@@ -186,7 +186,7 @@
 </ul>
 <p>Example:</p>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">test_pop_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pop_data_output.html">pop_data_output</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"/cloud/project/data/DNA_Samples_Data_Analysis.csv"</span>, columns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">SJ_number</span>, <span class="va">Species</span>, <span class="va">sub_species</span><span class="op">)</span>, sample_col <span class="op">=</span> <span class="va">SJ_number</span>, samples <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"AR01"</span>, <span class="st">"AR02"</span>, <span class="st">"AR03"</span><span class="op">)</span>, NA_values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"na"</span><span class="op">)</span>, output_file <span class="op">=</span> <span class="st">"/cloud/project/test_pop_data.txt"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="../reference/pop_data_output.html">pop_data_output</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"/cloud/project/data/DNA_Samples_Data_Analysis.csv"</span>, columns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">SJ_number</span>, <span class="va">Species</span>, <span class="va">sub_species</span><span class="op">)</span>, sample_col <span class="op">=</span> <span class="va">SJ_number</span>, samples <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"AR01"</span>, <span class="st">"AR02"</span>, <span class="st">"AR03"</span><span class="op">)</span>, NA_values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"na"</span><span class="op">)</span>, output_file <span class="op">=</span> <span class="st">"/cloud/project/test_pop_data.txt"</span><span class="op">)</span></code></pre></div>
 <pre><code><span class="co">## <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">265</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">3</span></span></code></pre>
 <pre><code><span class="co">## <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
 <span class="co">## <span style="font-weight: bold;">Delimiter:</span> ","</span>
@@ -194,6 +194,12 @@
 <pre><code><span class="co">## </span>
 <span class="co">## <span style="color: #00BBBB;">ℹ</span> Use <span style="color: #262626; background-color: #DADADA;">`spec()`</span> to retrieve the full column specification for this data.</span>
 <span class="co">## <span style="color: #00BBBB;">ℹ</span> Specify the column types or set <span style="color: #262626; background-color: #DADADA;">`show_col_types = FALSE`</span> to quiet this message.</span></code></pre>
+<pre><code><span class="co">## <span style="color: #949494;"># A tibble: 3 × 3</span></span>
+<span class="co">##   SJ_number Species   sub_species</span>
+<span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      </span>
+<span class="co">## <span style="color: #BCBCBC;">1</span> AR01      C_venusta cercostigma</span>
+<span class="co">## <span style="color: #BCBCBC;">2</span> AR02      C_venusta cercostigma</span>
+<span class="co">## <span style="color: #BCBCBC;">3</span> AR03      C_venusta cercostigma</span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="samp_2b_seq-function">samp_2B_seq function<a class="anchor" aria-label="anchor" href="#samp_2b_seq-function"></a>
@@ -204,7 +210,7 @@
 <li><p>The output should be the counts for the specified column and should have a new csv with the filtered data.</p></li>
 </ul>
 <p>Example:</p>
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/samp_2B_seq.html">samp_2B_seq</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"/cloud/project/data/DNA_Samples_Data_Analysis.csv"</span>, na_values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"na"</span><span class="op">)</span>, col2count <span class="op">=</span> <span class="va">strange_topology</span>, output_csv <span class="op">=</span> <span class="st">"/cloud/project/test_output.csv"</span>, filter <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"yes"</span>, <span class="cn">NA</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <pre><code><span class="co">## <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">265</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">30</span></span></code></pre>
 <pre><code><span class="co">## <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
@@ -231,7 +237,7 @@
 <li><p>The ouptut is a summary of the cross-validation values for each K value and a plot of K and the minimuim cross-validation. The lower the cross-validation score, the better the K fits in the data.</p></li>
 </ul>
 <p>Example:</p>
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">op_K_snmf</span><span class="op">(</span>vcf_file <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_pop.vcf"</span>, K <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, new_name <span class="op">=</span> <span class="st">"/cloud/project/test_1.geno"</span>, repetitions <span class="op">=</span> <span class="fl">5</span>, project_name <span class="op">=</span> <span class="st">"snmf_test_1"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
@@ -243,7 +249,7 @@
 <li><p>This function is important because structure plots are a common analysis a figure used to look at genetic structure. This can help to assess the amount of admixture between different genetic clusters. This also outputs the order of the samples in the structure plot.</p></li>
 </ul>
 <p>Example:</p>
-<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/snmf_structure_plot.html">snmf_structure_plot</a></span><span class="op">(</span>project_name <span class="op">=</span> <span class="va">snmf_test_1</span>, K <span class="op">=</span> <span class="fl">4</span>, colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"green"</span>, <span class="st">"blue"</span>, <span class="st">"purple"</span>, <span class="st">"red"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
@@ -256,7 +262,7 @@
 <li><p>The output will give a quick summary of the data and the Processed variant is the number of the SNPs in the data. It should also display the name of the genlight object in quotes.</p></li>
 </ul>
 <p>Example:</p>
-<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/genlight_creator.html">genlight_creator</a></span><span class="op">(</span>vcf_file <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_pop.vcf"</span>, pop_data <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_samples_data.txt"</span>, genlight_name <span class="op">=</span> <span class="st">"gl.test"</span>, pop_col <span class="op">=</span> <span class="va">sub_species</span><span class="op">)</span></code></pre></div>
 <pre><code>## Scanning file to determine attributes.
 ## File attributes:
