@@ -83,7 +83,7 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>Load in libaries used by this package</p>
+<p>Load in these libaries used by this package</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></code></pre></div>
@@ -98,7 +98,7 @@
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span></code></pre></div>
 <pre><code><span class="co">## Loading required package: usethis</span></code></pre>
-<p>Install these packages and load them</p>
+<p>Install these packages to properly use this package and then load the libraries</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"vcfR"</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ape"</span><span class="op">)</span>
@@ -130,15 +130,46 @@
 <span class="co">## OMP parallel support: available</span></code></pre>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://membres-timc.imag.fr/Olivier.Francois/lea.html" class="external-link">LEA</a></span><span class="op">)</span></code></pre></div>
-<p>Now install own R package</p>
+<p>Now install this sweet R package</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"sorenDJ/R_package_Johnson"</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## Skipping install of 'CoolBeans' from a github remote, the SHA1 (114ce99a) has not changed since last install.</span>
-<span class="co">##   Use `force = TRUE` to force installation</span></code></pre>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<pre><code><span class="co">## Downloading GitHub repo sorenDJ/R_package_Johnson@HEAD</span></code></pre>
+<pre><code>##   
+   checking for file ‘/tmp/RtmpPQl4Vf/remotes6d2431695d6/sorenDJ-R_package_Johnson-6cc5bcb/DESCRIPTION’ ...
+  
+ [32m✓ [39m   [38;5;247mchecking for file ‘/tmp/RtmpPQl4Vf/remotes6d2431695d6/sorenDJ-R_package_Johnson-6cc5bcb/DESCRIPTION’ [39m [36m [39m
+## 
+  
+ [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mpreparing ‘CoolBeans’: [39m [36m [39m
+## 
+  
+   checking DESCRIPTION meta-information ...
+  
+ [32m✓ [39m   [38;5;247mchecking DESCRIPTION meta-information [39m [36m [39m
+## 
+  
+ [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mchecking for LF line-endings in source and make files and shell scripts [39m [36m [39m
+## 
+  
+ [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mchecking for empty or unneeded directories [39m [36m [39m
+##  [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mlooking to see if a ‘data/datalist’ file should be added [39m [36m [39m
+## 
+  
+ [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mcreating default NAMESPACE file [39m [36m [39m
+##  [38;5;247m─ [39m [38;5;247m   [39m [38;5;247mbuilding ‘CoolBeans_0.0.0.9000.tar.gz’ [39m [36m [39m
+## 
+  
+   
+## </code></pre>
+<pre><code><span class="co">## Installing package into '/cloud/lib/x86_64-pc-linux-gnu-library/4.1'</span>
+<span class="co">## (as 'lib' is unspecified)</span></code></pre>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"CoolBeans"</span><span class="op">)</span></code></pre></div>
-<p>Let us download some data for our package:</p>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<p>Let us download some data to play around with this package:</p>
+<p>DNA_Samples_Data_Analysis is a csv file that contains data on collected tissue and DNA samples</p>
+<p>mtDNA_samples_data is a text file that contains certain samples (ones inlcuded in the vcf file) and columns from the above mentioned csv file</p>
+<p>mtDNA_pop is a vcf file that contains the SNP data from the mitochondria for 122 samples of the Blacktail Shiner</p>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/download.file.html" class="external-link">download.file</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/DNA_Samples_Data_Analysis.csv"</span>, destfile <span class="op">=</span> <span class="st">"/cloud/project/data/DNA_Samples_Data_Analysis.csv"</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/utils/download.file.html" class="external-link">download.file</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/mtDNA_samples_data.txt"</span>, destfile <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_samples_data.txt"</span><span class="op">)</span>
@@ -146,25 +177,15 @@
 <span class="fu"><a href="https://rdrr.io/r/utils/download.file.html" class="external-link">download.file</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/sorenDJ/R_package_Johnson/master/data/mtDNA_pop.vcf"</span>, destfile <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_pop.vcf"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="working-example">Working Example<a class="anchor" aria-label="anchor" href="#working-example"></a>
-</h2>
-<ul>
-<li>An example of each function and how it works</li>
-<li>Say something about why this is a good thing to do</li>
-<li>say something about expected output</li>
-</ul>
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mult.html">mult</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span></code></pre></div>
-</div>
-<div class="section level2">
 <h2 id="pop_data_output-function">pop_data_output function<a class="anchor" aria-label="anchor" href="#pop_data_output-function"></a>
 </h2>
 <ul>
-<li><p>This function takes a csv file and converts it to a text file that only includes the data and samples that are specified.</p></li>
-<li><p>This function is important because some population structure analyses require text files with population data and the samples you want to look at.</p></li>
+<li><p>This function takes a csv file and converts it to a text file that only includes the data and samples that are specified. The columns needs to be a concatenation of columns from the csv file that are wanted to be kept. These columns do not need quotes around them. Make sure to include the column that has the sample names which will then be used for sample_col (ex: SJ_number). samples are a concatenation of the names of the samples that you want to be kept (these need to be in quotes). NA_values are concatenation of values in the csv file you want to be read as NAs (ex: “” and “na”). Output_file is the path where you want the new text file to be saved. Before running the below example, make the necessarily changes to the file path so they work for your directory.</p></li>
+<li><p>This function is important because some population structure analyses require text files with population data and the samples you want to look at. This process can be tidious otherwise.</p></li>
+<li><p>This function should output the filtered dataframe and create a new text file.</p></li>
 </ul>
 <p>Example:</p>
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">test_pop_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pop_data_output.html">pop_data_output</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"/cloud/project/data/DNA_Samples_Data_Analysis.csv"</span>, columns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">SJ_number</span>, <span class="va">Species</span>, <span class="va">sub_species</span><span class="op">)</span>, sample_col <span class="op">=</span> <span class="va">SJ_number</span>, samples <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"AR01"</span>, <span class="st">"AR02"</span>, <span class="st">"AR03"</span><span class="op">)</span>, NA_values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"na"</span><span class="op">)</span>, output_file <span class="op">=</span> <span class="st">"/cloud/project/test_pop_data.txt"</span><span class="op">)</span></code></pre></div>
 <pre><code><span class="co">## <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">265</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">3</span></span></code></pre>
 <pre><code><span class="co">## <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
@@ -178,11 +199,12 @@
 <h2 id="samp_2b_seq-function">samp_2B_seq function<a class="anchor" aria-label="anchor" href="#samp_2b_seq-function"></a>
 </h2>
 <ul>
-<li><p>This function is to be used to check the number of samples for different values of a variable and then filter out samples that have a certain value for the variable. These filtered samples will then be created as a new csv file.</p></li>
+<li><p>This function is to be used to check the number of samples for different values of a variable and then filter out samples that have a certain value for the variable. These filtered samples will then be created as a new csv file. col2count is the column (not in quotes) that you want to be counted for each variable. filter is a concatenation of the values you want thhe sample to have from the counted column (thes values will be in quotes). output_csv is the file path for the new csv file that has the filtered data.</p></li>
 <li><p>This function can be helpful for organization of data. Often times I might want to know how many samples have already been sequeneced and how many haven’t. I then want a CSV file for the samples that haven’t been sequenced to know which ones they are.</p></li>
+<li><p>The output should be the counts for the specified column and should have a new csv with the filtered data.</p></li>
 </ul>
 <p>Example:</p>
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/samp_2B_seq.html">samp_2B_seq</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"/cloud/project/data/DNA_Samples_Data_Analysis.csv"</span>, na_values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"na"</span><span class="op">)</span>, col2count <span class="op">=</span> <span class="va">strange_topology</span>, output_csv <span class="op">=</span> <span class="st">"/cloud/project/test_output.csv"</span>, filter <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"yes"</span>, <span class="cn">NA</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <pre><code><span class="co">## <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">265</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">30</span></span></code></pre>
 <pre><code><span class="co">## <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
@@ -204,32 +226,37 @@
 </h2>
 <ul>
 <li><p>This function is to be used to determine the optimal K value given a vcf data set using a sparse non-negative matrix factorization algorithm. This function will output a summary of the cross-validation values for each K and also a plot of K and minimum cross-validation. This function also creates a snmf project object.</p></li>
-<li><p>This function can help to determine the number of ancestral populations and distinct genetic clusters. The found K value can then be used to plot structure plots. The created snmf project can then also be used for doing analyses in the LEA package.</p></li>
+<li><p>vcf_file is the path to the vcf file to be used in the function. K is the range of number of genetic clusters you want to test to see how well they fit the data. new_name is the file path of where you want to save the vcf file that is converted to a geno file which is needed for this analysis. The new file has to end in .geno. repetitions is the number of times you want the cross-validation analysis to be run for each K value. Higher repetitions will take longer but most likely be more accurate. project_name is the name you want the snmf project name to have (this needs to be in quotes). This will be used for a later function.</p></li>
+<li><p>This function can help to determine the number of ancestral populations and distinct genetic clusters. The found K value can then be used to plot structure plots. The created snmf project can then also be used for doing analyses in the LEA package. This function also converts a vcf file to geno file that can be used by certain packages.</p></li>
+<li><p>The ouptut is a summary of the cross-validation values for each K value and a plot of K and the minimuim cross-validation. The lower the cross-validation score, the better the K fits in the data.</p></li>
 </ul>
 <p>Example:</p>
-<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">op_K_snmf</span><span class="op">(</span>vcf_file <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_pop.vcf"</span>, K <span class="op">=</span> <span class="fl">4</span><span class="op">:</span><span class="fl">5</span>, new_name <span class="op">=</span> <span class="st">"/cloud/project/test_1.geno"</span>, repetitions <span class="op">=</span> <span class="fl">2</span>, project_name <span class="op">=</span> <span class="st">"snmf_test_1"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">op_K_snmf</span><span class="op">(</span>vcf_file <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_pop.vcf"</span>, K <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, new_name <span class="op">=</span> <span class="st">"/cloud/project/test_1.geno"</span>, repetitions <span class="op">=</span> <span class="fl">5</span>, project_name <span class="op">=</span> <span class="st">"snmf_test_1"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="snmf_structure_plot-function">snmf_structure_plot function<a class="anchor" aria-label="anchor" href="#snmf_structure_plot-function"></a>
 </h2>
 <ul>
 <li><p>This function creates a structure plot from a snmf project for a given value of K. The structure plot displays the probability of each sample belonging to a certain genetic cluster.</p></li>
-<li><p>This function is important because strucutre plots are a common anlaysis a figure used to look at genetic structure.</p></li>
+<li><p>the project name should be the one created from the above function or another created snmf project (this is not in quotes). K is a single numeric value representing the number of genetic clusters to use for the plot (use the optimal K found from the above function). colors is a concatenation of colors that you want to be used for the structure plot. Each color coresponds to a genetic cluster so the number of colors has to equal K.</p></li>
+<li><p>This function is important because structure plots are a common analysis a figure used to look at genetic structure. This can help to assess the amount of admixture between different genetic clusters. This also outputs the order of the samples in the structure plot.</p></li>
 </ul>
 <p>Example:</p>
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/snmf_structure_plot.html">snmf_structure_plot</a></span><span class="op">(</span>project_name <span class="op">=</span> <span class="va">snmf_test_1</span>, K <span class="op">=</span> <span class="fl">4</span>, colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"green"</span>, <span class="st">"blue"</span>, <span class="st">"purple"</span>, <span class="st">"red"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="genlight_creator">genlight_creator<a class="anchor" aria-label="anchor" href="#genlight_creator"></a>
 </h2>
 <ul>
-<li><p>This function creates a genlight object from a vcf file. This genlight object can then be used in the adegent pacakge to look at genetic population structure. The genlight object also combines a text file with the vcf data and one variable is chosen to be a population variable.</p></li>
+<li><p>This function creates a genlight object from a vcf file. This genlight object can then be used in the adegent pacakge to look at genetic population structure. The genlight object also combines a text file with the vcf data and one variable that is chosen to be a population variable.</p></li>
+<li><p>vcf_file is the pathfile the the vcf file to be used. pop_data is the path file to a text file with the samples in the vcf_file and certain population variables that you may want to use for analyses. genlight_name is the name you want this genlight oject to have. pop_col is a column from the pop_data text file you want to be used to group the samples.</p></li>
 <li><p>This function is important because it helps complete many steps in just one step. The genlight object is also important if using the adegent package and this function helps to keep the code organized so less likely to make a mistake.</p></li>
+<li><p>The output will give a quick summary of the data and the Processed variant is the number of the SNPs in the data. It should also display the name of the genlight object in quotes.</p></li>
 </ul>
 <p>Example:</p>
-<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/genlight_creator.html">genlight_creator</a></span><span class="op">(</span>vcf_file <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_pop.vcf"</span>, pop_data <span class="op">=</span> <span class="st">"/cloud/project/data/mtDNA_samples_data.txt"</span>, genlight_name <span class="op">=</span> <span class="st">"gl.test"</span>, pop_col <span class="op">=</span> <span class="va">sub_species</span><span class="op">)</span></code></pre></div>
 <pre><code>## Scanning file to determine attributes.
 ## File attributes:
